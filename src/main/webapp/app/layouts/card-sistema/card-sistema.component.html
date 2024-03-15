@@ -1,0 +1,11 @@
+<div class="container">
+  @for (sistema of sistemas; track trackId) {
+    <div class="card">
+      <h3>{{ sistema.descricao }}</h3>
+      <img src="{{ sistema.logoUrl }}" alt="Imagem do {{ sistema.descricao }}" />
+      <!--          <button class="btn btn-info me-2">-->
+      <!--            <span jhiTranslate="integraApp.sistema.home.refreshListLabel">Atualizar lista</span>-->
+      <!--          </button>-->
+    </div>
+  }
+</div>
