@@ -3,6 +3,7 @@
 /***************************
 put Sass variables here:
 eg $input-color: red;
+
 ****************************/
 // Override Bootstrap variables
 @import 'bootstrap-variables';
@@ -10,3 +11,6 @@ eg $input-color: red;
 @import 'bootstrap/scss/bootstrap';
 
 /* jhipster-needle-scss-add-vendor JHipster will add new css style */
+
+$azul-mpro: #30478a;
+$light-azul-mpro: #cbe5f7;
