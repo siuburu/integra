@@ -12,6 +12,7 @@ import { SortService } from 'app/shared/sort/sort.service';
 import { ISistema } from '../sistema.model';
 import { EntityArrayResponseType, SistemaService } from '../service/sistema.service';
 import { SistemaDeleteDialogComponent } from '../delete/sistema-delete-dialog.component';
+import { CardSistemaComponent } from '../../../layouts/card-sistema/card-sistema.component';
 
 @Component({
   standalone: true,
@@ -26,6 +27,7 @@ import { SistemaDeleteDialogComponent } from '../delete/sistema-delete-dialog.co
     DurationPipe,
     FormatMediumDatetimePipe,
     FormatMediumDatePipe,
+    CardSistemaComponent,
   ],
 })
 export class SistemaComponent implements OnInit {

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ISistema } from '../../entities/sistema/sistema.model';
+import { SistemaService } from '../../entities/sistema/service/sistema.service';
 
 @Component({
   selector: 'jhi-card-sistema',
@@ -9,5 +10,7 @@ import { ISistema } from '../../entities/sistema/sistema.model';
   styleUrl: './card-sistema.component.scss',
 })
 export class CardSistemaComponent {
+  constructor(protected sistemaService: SistemaService) {}
   @Input() sistemas?: ISistema[];
+  @Input() trackId = (_index: number, item: ISistema): number => this.sistemaService.getSistemaIdentifier(item);
 }
