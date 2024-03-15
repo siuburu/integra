@@ -48,6 +48,12 @@ public class CacheConfiguration {
             createCache(cm, mp.mpro.integra.domain.User.class.getName());
             createCache(cm, mp.mpro.integra.domain.Authority.class.getName());
             createCache(cm, mp.mpro.integra.domain.User.class.getName() + ".authorities");
+            createCache(cm, mp.mpro.integra.domain.Sistema.class.getName());
+            createCache(cm, mp.mpro.integra.domain.Sistema.class.getName() + ".users");
+            createCache(cm, mp.mpro.integra.domain.ControleAcesso.class.getName());
+            createCache(cm, mp.mpro.integra.domain.Area.class.getName());
+            createCache(cm, mp.mpro.integra.domain.Sistema.class.getName() + ".areas");
+            createCache(cm, mp.mpro.integra.domain.Area.class.getName() + ".sistemas");
             // jhipster-needle-ehcache-add-entry
         };
     }
