@@ -1,0 +1,25 @@
+{
+  "integraApp": {
+    "area": {
+      "home": {
+        "title": "Areas",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Area",
+        "createOrEditLabel": "Criar ou editar Area",
+        "notFound": "Nenhum Area encontrado"
+      },
+      "created": "Um novo Area foi criado com o identificador {{ param }}",
+      "updated": "Um Area foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Area foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Area {{ id }}?"
+      },
+      "detail": {
+        "title": "Area"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "sistema": "Sistema"
+    }
+  }
+}

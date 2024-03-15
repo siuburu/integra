@@ -1,0 +1,27 @@
+{
+  "integraApp": {
+    "controleAcesso": {
+      "home": {
+        "title": "Controle Acessos",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Controle Acesso",
+        "createOrEditLabel": "Criar ou editar Controle Acesso",
+        "notFound": "Nenhum Controle Acesso encontrado"
+      },
+      "created": "Um novo Controle Acesso foi criado com o identificador {{ param }}",
+      "updated": "Um Controle Acesso foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Controle Acesso foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Controle Acesso {{ id }}?"
+      },
+      "detail": {
+        "title": "Controle Acesso"
+      },
+      "id": "ID",
+      "dataAcesso": "Data Acesso",
+      "ipAcesso": "Ip Acesso",
+      "nomeDispositivo": "Nome Dispositivo",
+      "user": "User"
+    }
+  }
+}

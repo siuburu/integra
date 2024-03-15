@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-controle-acesso-heading"
+        data-cy="ControleAcessoCreateUpdateHeading"
+        jhiTranslate="integraApp.controleAcesso.home.createOrEditLabel"
+      >
+        Create or edit a Controle Acesso
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" jhiTranslate="integraApp.controleAcesso.dataAcesso" for="field_dataAcesso">Data Acesso</label>
+          <div class="d-flex">
+            <input
+              id="field_dataAcesso"
+              data-cy="dataAcesso"
+              type="datetime-local"
+              class="form-control"
+              name="dataAcesso"
+              formControlName="dataAcesso"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" jhiTranslate="integraApp.controleAcesso.ipAcesso" for="field_ipAcesso">Ip Acesso</label>
+          <input type="text" class="form-control" name="ipAcesso" id="field_ipAcesso" data-cy="ipAcesso" formControlName="ipAcesso" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" jhiTranslate="integraApp.controleAcesso.nomeDispositivo" for="field_nomeDispositivo"
+            >Nome Dispositivo</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomeDispositivo"
+            id="field_nomeDispositivo"
+            data-cy="nomeDispositivo"
+            formControlName="nomeDispositivo"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" jhiTranslate="integraApp.controleAcesso.user" for="field_user">User</label>
+          <select class="form-control" id="field_user" data-cy="user" name="user" formControlName="user" [compareWith]="compareUser">
+            <option [ngValue]="null"></option>
+            @for (userOption of usersSharedCollection; track $index) {
+              <option [ngValue]="userOption">{{ userOption.login }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

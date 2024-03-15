@@ -1,0 +1,33 @@
+{
+  "annotations": {
+    "changelogDate": "20240311141011"
+  },
+  "applications": "*",
+  "entityTableName": "controle_acesso",
+  "fields": [
+    {
+      "fieldName": "dataAcesso",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "ipAcesso",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomeDispositivo",
+      "fieldType": "String"
+    }
+  ],
+  "name": "ControleAcesso",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipWithBuiltInEntity": true
+    }
+  ],
+  "searchEngine": "no"
+}

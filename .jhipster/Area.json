@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20240311140911",
+    "dto": "mapstruct"
+  },
+  "applications": "*",
+  "entityTableName": "area",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Area",
+  "relationships": [
+    {
+      "otherEntityName": "sistema",
+      "otherEntityRelationshipName": "area",
+      "relationshipName": "sistema",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

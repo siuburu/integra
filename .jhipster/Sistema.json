@@ -1,0 +1,47 @@
+{
+  "annotations": {
+    "changelogDate": "20240311140911",
+    "dto": "mapstruct"
+  },
+  "applications": "*",
+  "entityTableName": "sistema",
+  "fields": [
+    {
+      "fieldName": "group",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "required"],
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "required"],
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "descricao",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength", "required"],
+      "fieldValidateRulesMinlength": "10"
+    },
+    {
+      "fieldName": "homeUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "logoUrl",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Sistema",
+  "relationships": [
+    {
+      "otherEntityName": "area",
+      "otherEntityRelationshipName": "sistema",
+      "relationshipName": "area",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

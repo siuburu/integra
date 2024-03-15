@@ -1,0 +1,29 @@
+{
+  "integraApp": {
+    "sistema": {
+      "home": {
+        "title": "Sistemas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sistema",
+        "createOrEditLabel": "Create or edit a Sistema",
+        "notFound": "No Sistemas found"
+      },
+      "created": "A new Sistema is created with identifier {{ param }}",
+      "updated": "A Sistema is updated with identifier {{ param }}",
+      "deleted": "A Sistema is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sistema {{ id }}?"
+      },
+      "detail": {
+        "title": "Sistema"
+      },
+      "id": "ID",
+      "group": "Group",
+      "nome": "Nome",
+      "descricao": "Descricao",
+      "homeUrl": "Home Url",
+      "logoUrl": "Logo Url",
+      "area": "Area"
+    }
+  }
+}

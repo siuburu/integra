@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (controleAcesso) {
+      <div>
+        <h2 data-cy="controleAcessoDetailsHeading"><span jhiTranslate="integraApp.controleAcesso.detail.title">Controle Acesso</span></h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ controleAcesso.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="integraApp.controleAcesso.dataAcesso">Data Acesso</span></dt>
+          <dd>
+            <span>{{ controleAcesso.dataAcesso | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="integraApp.controleAcesso.ipAcesso">Ip Acesso</span></dt>
+          <dd>
+            <span>{{ controleAcesso.ipAcesso }}</span>
+          </dd>
+          <dt><span jhiTranslate="integraApp.controleAcesso.nomeDispositivo">Nome Dispositivo</span></dt>
+          <dd>
+            <span>{{ controleAcesso.nomeDispositivo }}</span>
+          </dd>
+          <dt><span jhiTranslate="integraApp.controleAcesso.user">User</span></dt>
+          <dd>
+            <span>{{ controleAcesso.user?.login }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+        </button>
+
+        <button type="button" [routerLink]="['/controle-acesso', controleAcesso.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
