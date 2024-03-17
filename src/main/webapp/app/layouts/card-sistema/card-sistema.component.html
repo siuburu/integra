@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container-fluid">
   @if (sistemas && sistemas.length > 0) {
     @for (sistema of sistemas; track trackId) {
-      <div class="card">
-        <h3>{{ sistema.descricao }}</h3>
-        <img src="{{ sistema.logoUrl }}" alt="Imagem do {{ sistema.descricao }}" />
-        <!--          <button class="btn btn-info me-2">-->
-        <!--            <span jhiTranslate="integraApp.sistema.home.refreshListLabel">Atualizar lista</span>-->
-        <!--          </button>-->
+      <div class="card" style="width: 12rem">
+        <img class="card-img-top" src="{{ sistema.logoUrl }}" alt="Card image cap" />
+        <div class="card-body">
+          <h5 class="card-title">{{ sistema.nome }}</h5>
+        </div>
+        <a href="{{ sistema.homeUrl }}"><span></span></a>
       </div>
     }
   }
