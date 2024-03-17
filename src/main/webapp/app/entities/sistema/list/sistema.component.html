@@ -2,133 +2,133 @@
   <h2 id="page-heading" data-cy="SistemaHeading">
     <span jhiTranslate="integraApp.sistema.home.title">Sistemas</span>
 
-    <!--    <div class="d-flex justify-content-end">-->
-    <!--      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">-->
-    <!--        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>-->
-    <!--        <span jhiTranslate="integraApp.sistema.home.refreshListLabel">Refresh list</span>-->
-    <!--      </button>-->
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="integraApp.sistema.home.refreshListLabel">Refresh list</span>
+      </button>
 
-    <!--      <button-->
-    <!--        id="jh-create-entity"-->
-    <!--        data-cy="entityCreateButton"-->
-    <!--        class="btn btn-primary jh-create-entity create-sistema"-->
-    <!--        [routerLink]="['/sistema/new']"-->
-    <!--      >-->
-    <!--        <fa-icon icon="plus"></fa-icon>-->
-    <!--        <span jhiTranslate="integraApp.sistema.home.createLabel">Create a new Sistema</span>-->
-    <!--      </button>-->
-    <!--    </div>-->
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-sistema"
+        [routerLink]="['/sistema/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="integraApp.sistema.home.createLabel">Create a new Sistema</span>
+      </button>
+    </div>
   </h2>
 
-  <!--  <jhi-alert-error></jhi-alert-error>-->
+  <jhi-alert-error></jhi-alert-error>
 
-  <!--  <jhi-alert></jhi-alert>-->
+  <jhi-alert></jhi-alert>
 
-  <!--  @if (sistemas?.length === 0) {-->
-  <!--    <div class="alert alert-warning" id="no-result">-->
-  <!--      <span jhiTranslate="integraApp.sistema.home.notFound">No Sistemas found</span>-->
-  <!--    </div>-->
-  <!--  }-->
+  @if (sistemas?.length === 0) {
+    <div class="alert alert-warning" id="no-result">
+      <span jhiTranslate="integraApp.sistema.home.notFound">No Sistemas found</span>
+    </div>
+  }
 
-  <!--  @if (sistemas && sistemas.length > 0) {-->
-  <!--    <div class="table-responsive table-entities" id="entities">-->
-  <!--      <table class="table table-striped" aria-describedby="page-heading">-->
-  <!--        <thead>-->
-  <!--          <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">-->
-  <!--            <th scope="col" jhiSortBy="id">-->
-  <!--              <div class="d-flex">-->
-  <!--                <span jhiTranslate="global.field.id">ID</span>-->
+  @if (sistemas && sistemas.length > 0) {
+    <div class="table-responsive table-entities" id="entities">
+      <table class="table table-striped" aria-describedby="page-heading">
+        <thead>
+          <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+            <th scope="col" jhiSortBy="id">
+              <div class="d-flex">
+                <span jhiTranslate="global.field.id">ID</span>
 
-  <!--                <fa-icon class="p-1" icon="sort"></fa-icon>-->
-  <!--              </div>-->
-  <!--            </th>-->
-  <!--            <th scope="col" jhiSortBy="group">-->
-  <!--              <div class="d-flex">-->
-  <!--                <span jhiTranslate="integraApp.sistema.group">Group</span>-->
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="group">
+              <div class="d-flex">
+                <span jhiTranslate="integraApp.sistema.group">Group</span>
 
-  <!--                <fa-icon class="p-1" icon="sort"></fa-icon>-->
-  <!--              </div>-->
-  <!--            </th>-->
-  <!--            <th scope="col" jhiSortBy="nome">-->
-  <!--              <div class="d-flex">-->
-  <!--                <span jhiTranslate="integraApp.sistema.nome">Nome</span>-->
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="nome">
+              <div class="d-flex">
+                <span jhiTranslate="integraApp.sistema.nome">Nome</span>
 
-  <!--                <fa-icon class="p-1" icon="sort"></fa-icon>-->
-  <!--              </div>-->
-  <!--            </th>-->
-  <!--            <th scope="col" jhiSortBy="descricao">-->
-  <!--              <div class="d-flex">-->
-  <!--                <span jhiTranslate="integraApp.sistema.descricao">Descricao</span>-->
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="descricao">
+              <div class="d-flex">
+                <span jhiTranslate="integraApp.sistema.descricao">Descricao</span>
 
-  <!--                <fa-icon class="p-1" icon="sort"></fa-icon>-->
-  <!--              </div>-->
-  <!--            </th>-->
-  <!--            <th scope="col" jhiSortBy="homeUrl">-->
-  <!--              <div class="d-flex">-->
-  <!--                <span jhiTranslate="integraApp.sistema.homeUrl">Home Url</span>-->
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="homeUrl">
+              <div class="d-flex">
+                <span jhiTranslate="integraApp.sistema.homeUrl">Home Url</span>
 
-  <!--                <fa-icon class="p-1" icon="sort"></fa-icon>-->
-  <!--              </div>-->
-  <!--            </th>-->
-  <!--            <th scope="col" jhiSortBy="logoUrl">-->
-  <!--              <div class="d-flex">-->
-  <!--                <span jhiTranslate="integraApp.sistema.logoUrl">Logo Url</span>-->
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="logoUrl">
+              <div class="d-flex">
+                <span jhiTranslate="integraApp.sistema.logoUrl">Logo Url</span>
 
-  <!--                <fa-icon class="p-1" icon="sort"></fa-icon>-->
-  <!--              </div>-->
-  <!--            </th>-->
-  <!--            <th scope="col" jhiSortBy="area.id">-->
-  <!--              <div class="d-flex">-->
-  <!--                <span jhiTranslate="integraApp.sistema.area">Area</span>-->
-  <!--                <fa-icon class="p-1" icon="sort"></fa-icon>-->
-  <!--              </div>-->
-  <!--            </th>-->
-  <!--            <th scope="col"></th>-->
-  <!--          </tr>-->
-  <!--        </thead>-->
-  <!--        <tbody>-->
-  <!--          @for (sistema of sistemas; track trackId) {-->
-  <!--            <tr data-cy="entityTable">-->
-  <!--              <td>-->
-  <!--                <a [routerLink]="['/sistema', sistema.id, 'view']">{{ sistema.id }}</a>-->
-  <!--              </td>-->
-  <!--              <td>{{ sistema.group }}</td>-->
-  <!--              <td>{{ sistema.nome }}</td>-->
-  <!--              <td>{{ sistema.descricao }}</td>-->
-  <!--              <td>-->
-  <!--                <a href="{{ sistema.homeUrl }}">{{ sistema.nome }}</a>-->
-  <!--              </td>-->
-  <!--              <td><img src="{{ sistema.logoUrl }}" /></td>-->
-  <!--              <td>-->
-  <!--                @if (sistema.area) {-->
-  <!--                  <div>-->
-  <!--                    <a [routerLink]="['/area', sistema.area.id, 'view']">{{ sistema.area.id }}</a>-->
-  <!--                  </div>-->
-  <!--                }-->
-  <!--              </td>-->
-  <!--              <td class="text-end">-->
-  <!--                <div class="btn-group">-->
-  <!--                  <a [routerLink]="['/sistema', sistema.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">-->
-  <!--                    <fa-icon icon="eye"></fa-icon>-->
-  <!--                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>-->
-  <!--                  </a>-->
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col" jhiSortBy="area.id">
+              <div class="d-flex">
+                <span jhiTranslate="integraApp.sistema.area">Area</span>
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (sistema of sistemas; track trackId) {
+            <tr data-cy="entityTable">
+              <td>
+                <a [routerLink]="['/sistema', sistema.id, 'view']">{{ sistema.id }}</a>
+              </td>
+              <td>{{ sistema.group }}</td>
+              <td>{{ sistema.nome }}</td>
+              <td>{{ sistema.descricao }}</td>
+              <td>
+                <a href="{{ sistema.homeUrl }}">{{ sistema.nome }}</a>
+              </td>
+              <td><img src="{{ sistema.logoUrl }}" width="32em" height="32em" /></td>
+              <td>
+                @if (sistema.area) {
+                  <div>
+                    <a [routerLink]="['/area', sistema.area.id, 'view']">{{ sistema.area.id }}</a>
+                  </div>
+                }
+              </td>
+              <td class="text-end">
+                <div class="btn-group">
+                  <a [routerLink]="['/sistema', sistema.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                    <fa-icon icon="eye"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                  </a>
 
-  <!--                  <a [routerLink]="['/sistema', sistema.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">-->
-  <!--                    <fa-icon icon="pencil-alt"></fa-icon>-->
-  <!--                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>-->
-  <!--                  </a>-->
+                  <a [routerLink]="['/sistema', sistema.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                    <fa-icon icon="pencil-alt"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                  </a>
 
-  <!--                  <button type="submit" (click)="delete(sistema)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">-->
-  <!--                    <fa-icon icon="times"></fa-icon>-->
-  <!--                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>-->
-  <!--                  </button>-->
-  <!--                </div>-->
-  <!--              </td>-->
-  <!--            </tr>-->
-  <!--          }-->
-  <!--        </tbody>-->
-  <!--      </table>-->
-  <!--    </div>-->
-  <!--  }-->
+                  <button type="submit" (click)="delete(sistema)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                    <fa-icon icon="times"></fa-icon>
+                    <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
   <jhi-card-sistema [trackId]="trackId" [sistemas]="sistemas"></jhi-card-sistema>
 </div>
