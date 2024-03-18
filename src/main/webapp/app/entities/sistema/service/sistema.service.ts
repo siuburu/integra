@@ -14,8 +14,8 @@ export type EntityArrayResponseType = HttpResponse<ISistema[]>;
 
 @Injectable({ providedIn: 'root' })
 export class SistemaService {
-  protected resourceUrl = this.applicationConfigService.getEndpointFor('api/sistemas/all');
-  //protected resourceUrl = this.applicationConfigService.getEndpointFor('api/sistemas');
+  //protected resourceUrl = this.applicationConfigService.getEndpointFor('api/sistemas/all');
+  protected resourceUrl = this.applicationConfigService.getEndpointFor('api/sistemas');
 
   constructor(
     protected http: HttpClient,

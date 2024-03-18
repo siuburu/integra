@@ -1,13 +1,15 @@
-<jhi-page-ribbon></jhi-page-ribbon>
+<div class="main">
+  <jhi-page-ribbon></jhi-page-ribbon>
 
-<div>
-  <router-outlet name="navbar"></router-outlet>
-</div>
-
-<div class="container-fluid">
-  <div class="card jh-card">
-    <router-outlet></router-outlet>
+  <div>
+    <router-outlet name="navbar"></router-outlet>
   </div>
 
+  <div class="container-fluid main-grid">
+    <jhi-sidebar></jhi-sidebar>
+    <div class="card jh-card">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
   <jhi-footer></jhi-footer>
 </div>
