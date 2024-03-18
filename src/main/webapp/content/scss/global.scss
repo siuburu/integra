@@ -241,5 +241,5 @@ angular-cli removes postcss-rtl processed inline css, processed rules must be ad
 
 .main-grid {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: min-content 1fr;
 }
