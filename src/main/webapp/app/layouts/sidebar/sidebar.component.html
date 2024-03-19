@@ -1,25 +1,27 @@
 <div class="wrapper">
   <nav id="sidebar">
     <div #collapse="ngbCollapse" [ngbCollapse]="!sidebarService.isCollapsed" [horizontal]="true" class="sidebar container">
-      <div class="sidebar-header">
-        <img src="content/images/user.png" alt="Integra logo" />
-        <h3>Integra</h3>
-      </div>
-
-      <div class="d-flex">
-        <div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column" orientation="vertical">
-          <ng-container ngbNavItem="mais-acessados">
-            <button ngbNavLink>Mais Acessados</button>
-          </ng-container>
-          <ng-container ngbNavItem="area-fim">
-            <button ngbNavLink>Área Fim</button>
-          </ng-container>
-          <ng-container ngbNavItem="area-administrativa">
-            <button ngbNavLink>Área Administrativa</button>
-          </ng-container>
+      <div>
+        <div class="sidebar-header">
+          <img src="content/images/user.png" alt="Integra logo" />
+          <h3>Integra</h3>
         </div>
 
-        <div [ngbNavOutlet]="nav" class="ms-4"></div>
+        <div class="d-flex">
+          <div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column" orientation="vertical">
+            <ng-container ngbNavItem="mais-acessados">
+              <button ngbNavLink>Mais Acessados</button>
+            </ng-container>
+            <ng-container ngbNavItem="area-fim">
+              <button ngbNavLink>Área Fim</button>
+            </ng-container>
+            <ng-container ngbNavItem="area-administrativa">
+              <button ngbNavLink>Área Administrativa</button>
+            </ng-container>
+          </div>
+
+          <div [ngbNavOutlet]="nav" class="ms-4"></div>
+        </div>
       </div>
     </div>
     <a href="#" (click)="toggleCollapse()"> ></a>

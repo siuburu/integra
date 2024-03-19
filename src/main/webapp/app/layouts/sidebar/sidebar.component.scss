@@ -1,6 +1,8 @@
+@import '../../../content/scss/vendor';
 #sidebar {
   max-width: 250px;
   display: flex;
+  background-color: $azul-mpro;
   .sidebar-header {
     padding: 1em 0;
     display: flex;
@@ -27,10 +29,18 @@
 
 a {
   display: flex;
-  color: inherit;
+  color: #fcfcfc;
   text-decoration: none;
   align-items: center;
   justify-content: center;
-  background-color: blue;
+  background-color: $azul-mpro;
   padding: 0 2px;
+}
+
+.nav-item {
+  .active {
+    button {
+      background-color: #28a745;
+    }
+  }
 }
