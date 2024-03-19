@@ -1,6 +1,6 @@
 <div class="wrapper">
   <nav id="sidebar">
-    <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed" [horizontal]="true" class="sidebar container">
+    <div #collapse="ngbCollapse" [ngbCollapse]="!sidebarService.isCollapsed" [horizontal]="true" class="sidebar container">
       <div class="sidebar-header">
         <h3>Bootstrap Sidebar</h3>
       </div>
@@ -21,5 +21,6 @@
         <div [ngbNavOutlet]="nav" class="ms-4"></div>
       </div>
     </div>
+    <a href="#" (click)="toggleCollapse()">BOTAO</a>
   </nav>
 </div>

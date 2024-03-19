@@ -15,6 +15,7 @@ import { EntityNavbarItems } from 'app/entities/entity-navbar-items';
 import ActiveMenuDirective from './active-menu.directive';
 import NavbarItem from './navbar-item.model';
 import { SidebarComponent } from '../sidebar/sidebar.component';
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   standalone: true,
@@ -39,6 +40,7 @@ export default class NavbarComponent implements OnInit {
     private accountService: AccountService,
     private profileService: ProfileService,
     private router: Router,
+    public sidebarService: SidebarService,
   ) {
     if (VERSION) {
       this.version = VERSION.toLowerCase().startsWith('v') ? VERSION : `v${VERSION}`;
@@ -78,5 +80,9 @@ export default class NavbarComponent implements OnInit {
 
   toggleNavbar(): void {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
+
+  toggleCollapse() {
+    this.sidebarService.updateIsCollapsed(!this.sidebarService.isCollapsed);
   }
 }
