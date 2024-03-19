@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {}
 
   toggleCollapse() {
-    this.sidebarService.updateIsCollapsed(!this.sidebarService.isCollapsed);
+    this.sidebarService.updateIsCollapsed(true);
   }
   active = 'mais-acessados';
 }
