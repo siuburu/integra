@@ -242,4 +242,5 @@ angular-cli removes postcss-rtl processed inline css, processed rules must be ad
 .main-grid {
   display: flex;
   flex: 1;
+  --bs-gutter-x: 0;
 }
