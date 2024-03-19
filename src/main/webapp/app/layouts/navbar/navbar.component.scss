@@ -34,3 +34,15 @@ Logo styles
   background: url('/content/images/logo-jhipster.png') no-repeat center center;
   background-size: contain;
 }
+
+.menu-logo {
+  height: 45px;
+  width: 45px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url('/content/images/menu.png') no-repeat center center;
+  background-size: contain;
+  /*===Inverte a cor da logo(remover após logo definitiva)===*/
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}

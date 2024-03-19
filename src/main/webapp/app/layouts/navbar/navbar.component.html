@@ -1,12 +1,12 @@
 <nav data-cy="navbar" class="navbar navbar-dark navbar-expand-md bg-dark">
   <div class="container-fluid">
+    <a href="#" (click)="toggleCollapse()">
+      <span class="menu-logo"></span>
+    </a>
     <a class="navbar-brand logo" routerLink="/" (click)="collapseNavbar()">
       <span class="logo-img"></span>
       <span jhiTranslate="global.title" class="navbar-title">Integra</span>
       <span class="navbar-version">{{ version }}</span>
-    </a>
-    <a href="#" (click)="toggleCollapse()">
-      <span>BOTAO</span>
     </a>
     <a
       class="navbar-toggler d-lg-none"
