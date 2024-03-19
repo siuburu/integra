@@ -108,6 +108,7 @@ Generic styles
 
 .footer {
   border-top: 1px solid rgba(0, 0, 0, 0.125);
+  margin: 0 auto;
 }
 
 .hand,
@@ -238,7 +239,11 @@ angular-cli removes postcss-rtl processed inline css, processed rules must be ad
 }
 /* jhipster-needle-scss-add-main JHipster will add new css style */
 //main.component.scss
-
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 .main-grid {
   display: flex;
   flex: 1;
