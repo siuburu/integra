@@ -1,0 +1,48 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import '../../../content/scss/mpro.scss';
+
+/* ==========================================================================
+Navbar
+========================================================================== */
+
+.navbar {
+  background-color: $azul-mpro;
+}
+.navbar-version {
+  font-size: 0.65em;
+  color: $navbar-dark-color;
+}
+
+.profile-image {
+  height: 1.75em;
+  width: 1.75em;
+}
+
+.navbar {
+  padding: 0.2rem 1rem;
+
+  a.nav-link {
+    font-weight: 400;
+  }
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.logo-img {
+  height: 90px;
+  width: 180px;
+  display: inline-block;
+  vertical-align: middle;
+  background: url('/content/images/logoMPRO_.png') no-repeat center center;
+  background-size: contain;
+}
+.user-session {
+  color: #fcfcfc;
+}
+
+.user-img {
+  height: 45px;
+  width: 45px;
+}
