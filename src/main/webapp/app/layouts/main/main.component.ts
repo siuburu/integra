@@ -5,7 +5,7 @@ import dayjs from 'dayjs/esm';
 
 import { AccountService } from 'app/core/auth/account.service';
 import { AppPageTitleStrategy } from 'app/app-page-title-strategy';
-import FooterComponent from '../footer/footer.component';
+import { FooterComponent } from '../footer/footer.component';
 import PageRibbonComponent from '../profiles/page-ribbon.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
