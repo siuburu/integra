@@ -1,7 +1,7 @@
 @import 'bootstrap-variables';
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
-
+@import 'mpro';
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/
@@ -105,11 +105,6 @@ Generic styles
 .readonly {
   background-color: #eee;
   opacity: 1;
-}
-
-.footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-  margin: 0 auto;
 }
 
 .hand,
