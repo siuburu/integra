@@ -1,7 +1,7 @@
 <div class="container-fluid">
   @if (sistemas && sistemas.length > 0) {
     @for (sistema of sistemas; track trackId) {
-      <div class="card" style="width: 12rem">
+      <div class="card" *ngIf="getArea(sistema.area?.id) === toggleSistemaService.activeArea">
         <img class="card-img-top" src="{{ sistema.logoUrl }}" alt="Card image cap" />
         <div class="card-body">
           <h5 class="card-title">{{ sistema.nome }}</h5>
