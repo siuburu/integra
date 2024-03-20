@@ -10,13 +10,13 @@
         <div class="d-flex">
           <div ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills flex-column" orientation="vertical">
             <ng-container ngbNavItem="mais-acessados">
-              <button ngbNavLink>Mais Acessados</button>
+              <button (click)="toggleArea()" ngbNavLink>Mais Acessados</button>
             </ng-container>
             <ng-container ngbNavItem="area-fim">
-              <button ngbNavLink>Área Fim</button>
+              <button (click)="toggleArea()" ngbNavLink>Área Fim</button>
             </ng-container>
             <ng-container ngbNavItem="area-administrativa">
-              <button ngbNavLink>Área Administrativa</button>
+              <button (click)="toggleArea()" ngbNavLink>Área Administrativa</button>
             </ng-container>
           </div>
 

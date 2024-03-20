@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NgbCollapse, NgbNav, NgbNavOutlet, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 import { SidebarService } from '../../services/sidebar.service';
+import { ToggleSistemaService } from '../../services/toggle-sistema.service';
 
 @Component({
   selector: 'jhi-sidebar',
@@ -12,11 +13,18 @@ import { SidebarService } from '../../services/sidebar.service';
 export class SidebarComponent implements OnInit {
   @Input() isCollapsed = false;
 
-  constructor(protected sidebarService: SidebarService) {}
+  constructor(
+    protected sidebarService: SidebarService,
+    protected toggleSistemaService: ToggleSistemaService,
+  ) {}
   ngOnInit() {}
 
   toggleCollapse() {
     this.sidebarService.updateIsCollapsed(true);
+  }
+
+  toggleArea() {
+    this.toggleSistemaService.updateActiveArea(this.active);
   }
   active = 'mais-acessados';
 }
