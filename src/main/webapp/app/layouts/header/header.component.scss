@@ -8,41 +8,49 @@ Navbar
 
 .navbar {
   background-color: $azul-mpro;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .navbar-version {
   font-size: 0.65em;
   color: $navbar-dark-color;
 }
 
-.profile-image {
-  height: 1.75em;
-  width: 1.75em;
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  color: #fcfcfc;
+  .user-img {
+    height: 45px;
+    width: 45px;
+  }
 }
 
 .navbar {
   padding: 0.2rem 1rem;
-
-  a.nav-link {
-    font-weight: 400;
-  }
 }
-
 /* ==========================================================================
 Logo styles
 ========================================================================== */
 .logo-img {
-  height: 90px;
+  height: 45px;
   width: 180px;
   display: inline-block;
   vertical-align: middle;
   background: url('/content/images/logoMPRO_.png') no-repeat center center;
   background-size: contain;
 }
-.user-session {
-  color: #fcfcfc;
-}
-
-.user-img {
-  height: 45px;
-  width: 45px;
+.navbar-toggler {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
