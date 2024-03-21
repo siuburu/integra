@@ -6,6 +6,9 @@ import { NgbDropdown, NgbDropdownMenu, NgbDropdownToggle } from '@ng-bootstrap/n
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import TranslateDirective from '../../shared/language/translate.directive';
 import { SidebarService } from '../../services/sidebar.service';
+import { IControleAcesso } from '../../entities/controle-acesso/controle-acesso.model';
+import { AccountService } from '../../core/auth/account.service';
+import { Account } from '../../core/auth/account.model';
 
 @Component({
   selector: 'jhi-header',
@@ -25,7 +28,16 @@ import { SidebarService } from '../../services/sidebar.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(public sidebarService: SidebarService) {}
+  account: Account | null = null;
+
+  constructor(
+    public sidebarService: SidebarService,
+    private accountService: AccountService,
+  ) {}
+
+  ngOnInit() {
+    this.accountService.identity().subscribe(account => (this.account = account));
+  }
 
   toggleCollapse() {
     this.sidebarService.updateIsCollapsed(!this.sidebarService.isCollapsed);
