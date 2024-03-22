@@ -1,13 +1,25 @@
 <div class="container-fluid">
   @if (sistemas && sistemas.length > 0) {
     @for (sistema of sistemas; track trackId) {
-      <div class="card" *ngIf="getArea(sistema.area?.id) === toggleSistemaService.activeArea">
-        <img class="card-img-top" src="{{ sistema.logoUrl }}" alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">{{ sistema.nome }}</h5>
+      @if (getArea(sistema.area?.id) === toggleSistemaService.activeArea) {
+        <div class="card">
+          <img class="card-img-top" src="{{ sistema.logoUrl }}" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">{{ sistema.nome }}</h5>
+          </div>
+          <a (click)="logSistema(sistema.id, sistema.nome)" href="{{ sistema.homeUrl }}"><span></span></a>
         </div>
-        <a href="{{ sistema.homeUrl }}"><span></span></a>
-      </div>
+      } @else {
+        @for (msistema of localStorageService.recuperarUltimosItens(); track msistema) {
+          <div class="card">
+            <img class="card-img-top" src="{{ msistema }}" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{{ msistema.sistema }}</h5>
+            </div>
+            <a href="{{ msistema.key }}"><span></span></a>
+          </div>
+        }
+      }
     }
   }
 </div>
